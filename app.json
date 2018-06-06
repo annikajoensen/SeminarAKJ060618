@@ -1,0 +1,26 @@
+{
+  "id": "ce92c56a-61ba-4981-9998-a2ed98866ea2",
+  "name": "SeminarAKJ",
+  "publisher": "AKJ_Udvikler",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "compatibilityId": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "showMyCode": true,
+  "features": "TranslationFile",
+  "target": "Internal",
+  "platform": "11.0.0.0",
+  "application": "11.0.0.0",
+  "idRange": {
+    "from": 123456700,
+    "to": 123456799
+  }
+}
