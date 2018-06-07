@@ -352,6 +352,11 @@ table 123456710 "Seminar Registration Header"
             NoSeriesMgt.InitSeries(SeminarSetup."Seminar Registration Nos.", xRec."No. Series", 0D, "No.", "No. Series");
         end;
         initrecord;
+        // Lab 8.1..
+        if GetFilter("Seminar No.") <> '' then
+            if GetRangeMin("Seminar No.") = GetRangeMax("Seminar No.") then
+                Validate("Seminar No.",GetRangeMin("Seminar No."));
+        // ..Lab 8.1
     end;
 
     local procedure InitRecord();

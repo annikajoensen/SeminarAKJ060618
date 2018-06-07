@@ -1,8 +1,12 @@
 table 123456718 "Posted Seminar Reg. Header"
 {
-// CSD1.00 - 2018-01-01 - D. E. Veloper
-// Chapter 7 - Lab 3-1
-    Caption = 'Posted Seminar Reg. Header';
+    // CSD1.00 - 2018-01-01 - D. E. Veloper
+    // Chapter 7 - Lab 3-1
+    // Lab 8.2.3 - Added LookupPageId & DrilldownPageId properties
+    
+    Caption = 'Seminar Registration Header';
+    LookupPageId = "Posted Seminar Reg. List";
+    DrillDownPageId = "Posted Seminar Reg. List";
 
     Fields
     {
@@ -109,7 +113,7 @@ table 123456718 "Posted Seminar Reg. Header"
         Field(22; Comment; Boolean)
         {
             Caption = 'Comment';
-            CalcFormula = Exist ("Seminar Comment Line" where ("Table Name" = const("Posted Seminar Reg. Header"),
+            CalcFormula = Exist ("Seminar Comment Line" where ("Table Name" = const ("Posted Seminar Reg. Header"),
                                                               "No." = Field ("No.")));
             Editable = false;
             FieldClass = FlowField;
@@ -138,23 +142,23 @@ table 123456718 "Posted Seminar Reg. Header"
             Caption = 'Posting No. Series';
             TableRelation = "No. Series".Code;
         }
-        field(29;"User Id";Code[50])
+        field(29; "User Id"; Code[50])
         {
-            Caption='User Id';
-            TableRelation=User;
-            ValidateTableRelation=false;
-            
+            Caption = 'User Id';
+            TableRelation = User;
+            ValidateTableRelation = false;
+
             trigger OnLookup();
             var
-                UserMgt : Codeunit "User Management";
+                UserMgt: Codeunit "User Management";
             begin
                 UserMgt.LookupUserID("User Id");
             end;
         }
-        field(30;"Source Code";Code[10])
+        field(30; "Source Code"; Code[10])
         {
-            Caption='Source Code';
-            TableRelation="Source Code";
+            Caption = 'Source Code';
+            TableRelation = "Source Code";
         }
     }
 

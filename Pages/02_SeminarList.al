@@ -54,14 +54,42 @@ page 123456702 "Seminar List"
 
     actions
     {
-        area(processing)
+        // Lab 8.1.3..
+        area(Navigation)
         {
-            action(ActionName)
+            group("&Seminar")
             {
-                trigger OnAction();
-                begin
-                end;
+                action("Ledger Entries")
+                {
+                    RunObject = page "Seminar Ledger Entries";
+                    RunPageLink = "Seminar No." = field ("No.");
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    ShortcutKey = "Ctrl+F7";
+                    Image = WarrantyLedger;
+                }
+                action("&Registrations")
+                {
+                    RunObject = page "Seminar Registration List";
+                    RunPageLink = "Seminar No." = field ("No.");
+                    Image = Timesheet;
+                    Promoted = true;
+                    PromotedCategory = Process;
+                }
             }
         }
+        area(Processing)
+        {
+            action("Seminar Registration")
+            {
+                RunObject = page "Seminar Registration";
+                RunPageLink = "Seminar No." = field ("No.");
+                RunPageMode = Create;
+                Image = NewTimesheet;
+                Promoted = true;
+                PromotedCategory = New;
+            }
+        }
+        // ..Lab 8.1.3
     }
 }
