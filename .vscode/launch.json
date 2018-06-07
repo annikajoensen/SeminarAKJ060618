@@ -8,6 +8,7 @@
             "server": "https://udvikling-nav2018-r4-w1.bdchosting.dk",
             "serverInstance": "BDCkursus_AKJ_SLN",
             "authentication": "UserPassword",
+            "schemaUpdateMode":  "Synchronize",//ændres til recreate, hvis tabelfelter er omdøbt
             "startupObjectId": 22,
             "port": 8049
 
