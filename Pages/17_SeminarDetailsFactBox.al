@@ -1,6 +1,6 @@
 page 123456717 "Seminar Details FactBox"
 {
-    // CSD1.00 - 2018-06-06 - AKJ
+    // CSD1.00 - 2018-01-01 - D. E. Veloper
     //   Chapter 6 - Lab 2
     //     - Created new page
 
@@ -31,10 +31,6 @@ page 123456717 "Seminar Details FactBox"
             {
             }
         }
-    }
-
-    actions
-    {
     }
 }
 
