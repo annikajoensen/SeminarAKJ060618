@@ -3,6 +3,7 @@ report 123456701 SeminarRegParticipantList
     UsageCategory = ReportsAndAnalysis;
     Caption = 'Seminar Reg.- Participant List.';
     DefaultLayout = RDLC;
+    RDLCLayout = '.\Layouts\01_SeminarRegParticipantList_Lay.rdlc';
 
     dataset
     {
